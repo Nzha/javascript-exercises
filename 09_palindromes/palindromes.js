@@ -1,10 +1,7 @@
 const palindromes = function (str) {
-    strStrip = str.replace(/!|\.| |,/g, '').toLowerCase();
+    strStrip = str.toLowerCase().replace(/[^a-z]/g, '');
     reverseStrStrip = strStrip.split('').reverse().join('');
-    if (reverseStrStrip === strStrip) {
-        return true;
-    }
-    return false;
+    return reverseStrStrip === strStrip
 };
 
 // Do not edit below this line
